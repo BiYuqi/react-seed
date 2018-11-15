@@ -7,10 +7,9 @@ const devMode = process.env.NODE_ENV !== 'production'
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
-
-module.export = {
+const baseConfig = {
   context: path.resolve(__dirname, '../'),
-  entry: path.resolve(__dirname, 'src/index.js'),
+  entry: resolve('src/index.js'),
   output: {
     path: path.resolve('dist'),
     publicPath: '/',
@@ -48,3 +47,5 @@ module.export = {
     }
   }
 }
+
+module.exports = baseConfig

@@ -20,10 +20,10 @@ const webpackConfig = merge(baseWebpackConfig, {
     new webpack.HotModuleReplacementPlugin(),
     new htmlWebpackPlugin({
       filename: 'index.html',
-      template: '../index.html',
+      template: path.resolve(__dirname, '../index.html'),
       inject: true
     })
   ]
 })
 
-module.export = webpackConfig
+module.exports = webpackConfig
