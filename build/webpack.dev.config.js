@@ -2,6 +2,7 @@ const path = require('path')
 const merge = require('webpack-merge')
 const webpack = require('webpack')
 const htmlWebpackPlugin = require('html-webpack-plugin')
+const copyWebpackPlugin = require('copy-webpack-plugin')
 const baseWebpackConfig = require('./webpack.base.config')
 
 const webpackConfig = merge(baseWebpackConfig, {
@@ -18,6 +19,13 @@ const webpackConfig = merge(baseWebpackConfig, {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
+    new copyWebpackPlugin([
+      {
+        from: path.resolve(__dirname, '../static'),
+        to: 'static',
+        ignore: ['.*']
+      }
+    ]),
     new htmlWebpackPlugin({
       filename: 'index.html',
       template: path.resolve(__dirname, '../index.html'),

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Iframe</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    #test{
+      outline: none;
+      border: none;
+      background-color: rgb(29, 218, 199);
+      font-size: 20px;
+      padding: 4px 20px;
+      color: #fff;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h3 class="text">
+    我来自iframe页面，点击我可以测试我发射数据哦
+  </h3>
+  <button id="test">测试</button>
+  <script>
+    document.getElementById('test').onclick = function() {
+      window.parent.$event.trigger('iframe-event', 'Iframe数据终于来了---from-发布订阅模式')
+      window.parent.postMessage({type: 'iframe-post-message', msg: 'Iframe数据终于来了---from-postMessage'})
+    }
+  </script>
+</body>
+</html>

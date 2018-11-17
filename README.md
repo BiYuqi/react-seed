@@ -12,7 +12,10 @@ npm run dev
 
 # npm run build 待完成
 ```
+## Now
 
-## Zero
+目前项目只有开发环境，且增加一个嵌套iframe页面， 用来测试数据通信
 
-从零搭建教程
+## TODO
+
+从零搭建过程

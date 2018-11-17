@@ -1,0 +1,16 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.home-page{
+  padding: 0 20px;
+  .home-title{
+    text-align: center;
+    margin: 15px 0;
+  }
+  .home-layout{
+    display: flex;
+    justify-content: space-between;
+  }
+}

@@ -25,6 +25,12 @@ const baseConfig = {
         }
       },
       {
+        test: /\.(html)$/,
+        use: {
+          loader: 'html-loader'
+        }
+      },
+      {
         test: /\.(sa|sc|c)ss$/,
         use: [
           {
@@ -43,7 +49,8 @@ const baseConfig = {
   resolve: {
     extensions: ['.jsx', '.js', '.json'],
     alias: {
-      '@': resolve('src')
+      '@': resolve('src'),
+      'utils': resolve('src/utils')
     }
   }
 }
