@@ -8,8 +8,8 @@ const liStyle = {
   marginRight: '20px'
 }
 export default class EventTest extends React.Component {
-  constructor(props) {
-    super(props)
+  constructor() {
+    super()
     this.state = {
       type: '',
       clientX: 0,
@@ -25,6 +25,13 @@ export default class EventTest extends React.Component {
       tagName: e.target.tagName.toLowerCase()
     })
   }
+  renderLi(data) {
+    return Object.keys(data).map((item) =>
+      <li style={liStyle} key={item.toString()}>
+        {item}: {data[item]}
+      </li>
+    )
+  }
   render() {
     return (
       <div className="react-row" style={eventStyle}>
@@ -35,10 +42,7 @@ export default class EventTest extends React.Component {
           测试点击事件
         </button>
         <ul className="flex-center">
-          <li style={liStyle}>Type: {this.state.type}</li>
-          <li style={liStyle}>clientX: {this.state.clientX}</li>
-          <li style={liStyle}>clientY: {this.state.clientY}</li>
-          <li style={liStyle}>tagName: {this.state.tagName}</li>
+          { this.renderLi(this.state) }
         </ul>
       </div>
     )
