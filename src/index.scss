@@ -3,6 +3,28 @@
   padding: 0;
   box-sizing: border-box;
 }
+ul{
+  list-style: none;
+}
+.react-row{
+  margin: 15px 0;
+  border-bottom: 2px solid rgb(29, 210, 223);
+  padding: 10px 0;
+}
+.btn{
+  padding: 10px 20px;
+  outline: none;
+  border: none;
+  color: #eee;
+  background-color: #00dbc6;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
+}
+.flex-center{
+  display: flex;
+  align-items: center;
+}
 .home-page{
   padding: 0 20px;
   .home-title{

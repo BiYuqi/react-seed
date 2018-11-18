@@ -5,6 +5,7 @@ import Event from 'utils/pub-sub'
 
 import IframeReport from '@/components/IframeReport'
 import IframeRender from '@/components/IframeRender'
+import EventTest from '@/components/EventTest'
 
 import './index.scss'
 
@@ -47,7 +48,7 @@ class HomeIndex extends React.Component {
     return (
       <div className="home-page">
         <h2 className="home-title">React从零搭建项目&&入门Demo</h2>
-        <div className="home-layout">
+        <div className="home-layout react-row">
           <IframeReport />
           <IframeRender
             pubSub={this.state.pubSub}
@@ -55,6 +56,7 @@ class HomeIndex extends React.Component {
             date={this.state.date}
             />
         </div>
+        <EventTest />
       </div>
     )
   }
