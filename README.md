@@ -19,5 +19,7 @@ npm run build
 
 ## TODO
 
-搭建过程
-生产环境打包配置优化
+* 搭建过程
+* 生产环境打包配置优化
+* eslint校验
+* Autoprefixer自动补全样式
