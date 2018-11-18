@@ -46,7 +46,7 @@ class HomeIndex extends React.Component {
   render() {
     return (
       <div className="home-page">
-        <h2 className="home-title" >React从零搭建项目&&入门Demo</h2>
+        <h2 className="home-title">React从零搭建项目&&入门Demo</h2>
         <div className="home-layout">
           <IframeReport />
           <IframeRender

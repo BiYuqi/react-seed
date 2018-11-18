@@ -9,7 +9,9 @@ function resolve (dir) {
 }
 const baseConfig = {
   context: path.resolve(__dirname, '../'),
-  entry: resolve('src/index.js'),
+  entry: {
+    app: './src/index.js'
+  },
   output: {
     path: path.resolve('dist'),
     publicPath: '/',
