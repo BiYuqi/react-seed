@@ -1,6 +1,7 @@
 const path = require('path')
 const webpack = require('webpack')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 const devMode = process.env.NODE_ENV !== 'production'
 
@@ -54,7 +55,16 @@ const baseConfig = {
       '@': resolve('src'),
       'utils': resolve('src/utils')
     }
-  }
+  },
+  plugins: [
+    new CopyWebpackPlugin([
+      {
+        from: resolve('static'),
+        to: 'static',
+        ignore: ['.*']
+      }
+    ])
+  ]
 }
 
 module.exports = baseConfig

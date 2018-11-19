@@ -74,15 +74,7 @@ const webpackConfig = merge(baseWebpackConfig, {
       filename: 'index.html',
       inject: true,
       favicon: resolve('favicon.ico')
-    }),
-
-    new CopyWebpackPlugin([
-      {
-        from: resolve('static'),
-        to: 'static',
-        ignore: ['.*']
-      }
-    ])
+    })
   ]
 })
 
