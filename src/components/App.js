@@ -1,9 +1,7 @@
-import React from 'react'
-import { BrowserRouter as Router, Route, Link, NavLink } from 'react-router-dom'
+import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom'
 
 import IframeMsg from '@/components/IframeMsg'
 import EventTest from '@/components/EventTest'
-// import Home from '@/components/HomeIndex'
 
 import './App.scss'
 
