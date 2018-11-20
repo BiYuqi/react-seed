@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 
 import Event from 'utils/pub-sub'
 
-import App from '@/components/App.js'
+import App from '@/pages/App.js'
 
 import './index.scss'
 

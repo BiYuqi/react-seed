@@ -1,8 +1,8 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom'
 
-import IframeMsg from '@/components/IframeMsg'
-import EventTest from '@/components/EventTest'
+import IframeMsg from '@/pages/IframeMsg'
+import EventTest from '@/pages/EventTest'
 
 import './App.scss'
 
