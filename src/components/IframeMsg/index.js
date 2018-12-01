@@ -1,9 +1,7 @@
 import React from 'react'
 
-import IframeReport from '@/components/IframeReport'
-import IframeRender from '@/components/IframeRender'
-
-import Event from 'utils/pub-sub'
+import IframeReport from './iframe-report'
+import IframeRender from './iframe-render'
 
 import './index.scss'
 
@@ -18,7 +16,7 @@ export default class HomeIndex extends React.Component {
   }
   componentDidMount() {
     // 测试发布订阅
-    Event.listen('iframe-event', (ee) => {
+    window.$event.listen('iframe-event', (ee) => {
       this.setState({
         pubSub: ee,
         date: Date.now()

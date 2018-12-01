@@ -1,9 +1,7 @@
 import React from 'react'
-import { connect } from 'react-redux'
-import { addTodo } from '@/store/todo/actions'
 import './index.scss'
 
-class TodoHead extends React.Component {
+export default class TodoHead extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -19,7 +17,10 @@ class TodoHead extends React.Component {
     if (!this.state.input) {
       return
     }
-    this.props.addTodo(this.state.input)
+    this.props.onSubmitAdd({
+      content: this.state.input,
+      id: Date.now() + Math.floor((Math.random() * 999999 * Math.random() * 999999) / 999)
+    })
     this.setState({
       input: ''
     })
@@ -36,13 +37,10 @@ class TodoHead extends React.Component {
         </div>
         <button
           className="btn"
-          onClick={this.handleAddTodo}>Add Item</button>
+          onClick={this.handleAddTodo}>
+          Add Item
+        </button>
       </div>
     )
   }
 }
-
-export default connect(
-  null,
-  { addTodo }
-)(TodoHead)

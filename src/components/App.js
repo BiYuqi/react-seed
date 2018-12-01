@@ -1,9 +1,9 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, NavLink, Switch, Redirect } from 'react-router-dom'
 
-import IframeMsg from '@/pages/IframeMsg'
-import EventTest from '@/pages/EventTest'
-import TodoApp from '@/pages/TodoApp'
+import IframeMsg from '@/components/IframeMsg'
+import EventTest from '@/components/EventTest'
+import TodoApp from '@/components/TodoApp'
 
 import './App.scss'
 

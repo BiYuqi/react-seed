@@ -4,11 +4,13 @@ import {
   SET_FILTER
 } from './actions-type'
 
-export const addTodo = (content) => {
+export const addTodo = (data) => {
+  const { content, id } = data
   return {
     type: ADD_TODO,
     payload: {
-      content
+      content,
+      id
     }
   }
 }

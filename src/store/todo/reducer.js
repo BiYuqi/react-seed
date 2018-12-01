@@ -8,21 +8,17 @@ import {
 const initialState = {
   todoList: []
 }
-const initialFilter = {
-  ALL: "all",
-  COMPLETED: "completed",
-  INCOMPLETE: "incomplete"
-}
 
 export const todoItem = (state = initialState, action) => {
   switch (action.type) {
     case ADD_TODO: 
-      const { content } = action.payload
+      const { content, id } = action.payload
       return {
         ...state,
         todoList: [
           {
             content,
+            id,
             completed: false
           },
           ...state.todoList
@@ -33,7 +29,7 @@ export const todoItem = (state = initialState, action) => {
       return {
         ...state,
         todoList: state.todoList.map((todo, i) => {
-          if (i === id) {
+          if (todo.id === id) {
             return Object.assign({}, todo, {
               completed: !todo.completed
             })
@@ -47,7 +43,7 @@ export const todoItem = (state = initialState, action) => {
   }
 }
 
-export const visibilityFilter = (state = initialFilter, action) => {
+export const visibilityFilter = (state = 'all', action) => {
   switch (action.type) {
     case SET_FILTER: {
       return action.payload.filter
