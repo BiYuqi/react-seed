@@ -1,8 +1,6 @@
 import React from 'react'
 import cx from 'classnames'
 
-import './index.scss'
-
 const currentActiveClassName = (current, dynamic) => {
   return cx(dynamic === current && `filter-active`)
 }
