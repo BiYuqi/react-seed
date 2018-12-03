@@ -1,9 +1,9 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { addTodo, setFilter, toggleTodo } from '@/store/todo/actions'
-import TodoHead from '@/components/TodoApp/todo-head'
-import TodoBody from '@/components/TodoApp/todo-body'
-import TodoFilter from '@/components/TodoApp/todo-filter'
+import TodoHead from '@/components/TodoApp/TodoHead'
+import TodoBody from '@/components/TodoApp/TodoBody'
+import TodoFilter from '@/components/TodoApp/TodoFilter'
 
 class TodoHeadComponent extends React.Component {
   render() {
@@ -47,8 +47,15 @@ const mapDispatchToProps = (dispatch) => {
     }
   }
 }
-
+// 两种方法传递 dispatch事件
 export default connect(
   mapStateToProps,
-  mapDispatchToProps
+  // 第一种，显式传递 mapDispatchToProps
+  // mapDispatchToProps
+  // 第二种, prop到actions映射
+  {
+    onSubmitAdd: addTodo,
+    toggleTodo,
+    setFilter
+  }
 )(TodoHeadComponent)

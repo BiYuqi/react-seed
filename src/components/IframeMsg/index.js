@@ -1,7 +1,7 @@
 import React from 'react'
 
-import IframeReport from './iframe-report'
-import IframeRender from './iframe-render'
+import IframeReport from './IframeReport'
+import IframeRender from './IframeRender'
 
 import './index.scss'
 
