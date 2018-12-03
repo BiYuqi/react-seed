@@ -1,14 +1,14 @@
 import React from 'react'
 import cx from 'classnames'
 
-const TodoItem = ({ onClick, completed, content, id }) => {
+const TodoItem = ({ onComplete, onRemove, completed, content, id }) => {
   return (
     <li className={cx(
       'todo-item',
       completed && 'todo-item-completed' )}
-      onClick={onClick}
       data-id={id}>
-      {content}
+      <span onClick={onComplete}>{content}</span>
+      <button onClick={onRemove}>删除</button>
     </li>
   )
 }

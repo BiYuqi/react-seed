@@ -2,7 +2,8 @@ import { combineReducers } from 'redux'
 import {
   ADD_TODO,
   TOOGLE_TODO,
-  SET_FILTER
+  SET_FILTER,
+  DEL_TODO
 } from './actions-type'
 
 const initialState = {
@@ -35,6 +36,15 @@ export const todoItem = (state = initialState, action) => {
             })
           }
           return todo
+        })
+      }
+    }
+    case DEL_TODO: {
+      const { id } = action.payload
+      return {
+        ...state,
+        todoList: state.todoList.filter((todo, i) => {
+          return todo.id !== id
         })
       }
     }

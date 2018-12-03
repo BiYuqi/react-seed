@@ -14,6 +14,10 @@ html, body{
 ul{
   list-style: none;
 }
+button{
+  outline: none;
+  border: none;
+}
 .react-row{
   margin: 15px 0;
   border-bottom: 2px solid rgb(29, 210, 223);

@@ -1,7 +1,8 @@
 import {
   ADD_TODO,
   TOOGLE_TODO,
-  SET_FILTER
+  SET_FILTER,
+  DEL_TODO
 } from './actions-type'
 
 export const addTodo = (data) => {
@@ -24,6 +25,14 @@ export const toggleTodo = (id) => {
   }
 }
 
+export const delTodo = (id) => {
+  return {
+    type: DEL_TODO,
+    payload: {
+      id
+    }
+  }
+}
 export const setFilter = (filter) => {
   return {
     type: SET_FILTER,

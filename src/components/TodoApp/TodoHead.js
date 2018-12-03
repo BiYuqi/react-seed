@@ -18,7 +18,7 @@ export default class TodoHead extends React.Component {
     }
     this.props.onSubmitAdd({
       content: this.state.input,
-      id: Date.now() + Math.floor((Math.random() * 999999 * Math.random() * 999999) / 999)
+      id: [Date.now(), Math.random() * 100000000].join('-')
     })
     this.setState({
       input: ''

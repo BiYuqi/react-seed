@@ -50,6 +50,15 @@
     padding: 10px 0 10px 30px;
     cursor: pointer;
     position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    button{
+      background: #819bf9;
+      padding: 6px 14px;
+      color: #fff;
+      border-radius: 4px;
+    }
     &::before{
       display: block;
       content: '';
@@ -64,8 +73,10 @@
     }
     &.todo-item-completed{
       color: #d8d8d8;
-      text-decoration: line-through;
       border-bottom: 1px solid #eee;
+      span{
+        text-decoration: line-through;
+      }
       &::after{
         display: block;
         content: '';
