@@ -4,6 +4,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 const devMode = process.env.NODE_ENV !== 'production'
 
+// 拼接路径
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }

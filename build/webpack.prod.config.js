@@ -15,9 +15,13 @@ const resolve = (dir) => {
 const webpackConfig = merge(baseWebpackConfig, {
   mode: 'production',
   output: {
+    // Build后所有文件存放的位置
     path: resolve('dist'),
+    // html引用资源路径, 可在此配置cdn引用地址！
     publicPath: '/',
+    // 文件名
     filename: 'js/[name].[chunkhash].js',
+    // 用于打包require.ensure(代码分割)方法中引入的模块
     chunkFilename: 'js/[name].[id].[chunkhash].js'
   },
   optimization: {
