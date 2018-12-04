@@ -4,9 +4,7 @@
   "description": "A React Project Seed",
   "scripts": {
     "dev": "webpack-dev-server --mode development --config build/webpack.dev.config.js",
-    "build": "cross-env NODE_ENV=production webpack --config build/webpack.prod.config.js",
-    "test": "mocha --compilers js:@babel/register --require ./src/*.test.js",
-    "test-mocha": "mocha --compilers js:@babel/register --require ./src/components/EventTest/index.test.js"
+    "build": "cross-env NODE_ENV=production webpack --config build/webpack.prod.config.js"
   },
   "repository": {
     "type": "git",
