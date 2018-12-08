@@ -1,9 +1,9 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { addTodo, setFilter, toggleTodo, delTodo } from '@/store/todo/actions'
-import TodoHead from '@/components/TodoApp/TodoHead'
-import TodoBody from '@/components/TodoApp/TodoBody'
-import TodoFilter from '@/components/TodoApp/TodoFilter'
+import { addTodo, setFilter, toggleTodo, delTodo } from '../store/todo/actions'
+import TodoHead from '../components/TodoApp/TodoHead'
+import TodoBody from '../components/TodoApp/TodoBody'
+import TodoFilter from '../components/TodoApp/TodoFilter'
 
 class TodoHeadComponent extends React.Component {
   render() {

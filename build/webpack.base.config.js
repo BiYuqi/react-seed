@@ -50,7 +50,7 @@ const baseConfig = {
     ]
   },
   resolve: {
-    extensions: ['.jsx', '.js', '.json'],
+    extensions: ['.js', '.jsx', '.json'],
     alias: {
       '@': resolve('src'),
       'utils': resolve('src/utils')

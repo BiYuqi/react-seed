@@ -5,7 +5,7 @@ import store from './store/store'
 
 import Event from 'utils/pub-sub'
 
-import App from '@/components/App.js'
+import App from './components/App.js'
 
 import './index.scss'
 
