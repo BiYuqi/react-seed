@@ -40,13 +40,6 @@ module.exports = function(config) {
       './test-root-config.js': ['webpack', 'sourcemap', 'coverage']
     },
 
-    reporters: ['mocha'],
-
-    coverageReporter: {
-      type : 'html',
-      dir : 'coverage/'
-    },
-
     plugins: [
       // 'karma-*',
       // "karma-phantomjs-launcher",
@@ -56,15 +49,20 @@ module.exports = function(config) {
       require("karma-sourcemap-loader"),
       require("karma-mocha-reporter"),
       require("karma-phantomjs-launcher"),
-      require("karma-coverage")
+      require("karma-coverage"),
+      require('karma-chrome-launcher')
     ],
 
 
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['progress'],
+    reporters: ['mocha'],
 
+    coverageReporter: {
+      type : 'html',
+      dir : 'coverage/'
+    },
 
     // web server port
     port: 9876,
@@ -77,6 +75,14 @@ module.exports = function(config) {
     // level of logging
     // possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
     logLevel: config.LOG_INFO,
+    
+    // 设置此项 报错信息不提示
+    // client: {
+    //   captureConsole: true,
+    //   mocha: {
+    //     bail: true
+    //   }
+    // },
 
 
     // enable / disable watching file and executing tests whenever any file changes

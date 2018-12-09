@@ -5,3 +5,4 @@
 .idea/
 react-seed.iml
 test/
+coverage/
